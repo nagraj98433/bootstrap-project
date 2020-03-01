@@ -25,18 +25,23 @@ $(document).ready(function () {
     })
     var navbar = document.getElementById('navbar');
     var offsetTop = navbar.offsetTop;
-    console.log(offsetTop);
     window.addEventListener('scroll', function () {
-        console.log(window.scrollY);
         if (window.scrollY > offsetTop) {
             navbar.classList.add('fixed-top');
             navbar.classList.add('fadeUp');
+            toTop.style.display = 'block';
         } else {
             navbar.classList.contains('fixed-top') &&
                 navbar.classList.remove('fixed-top')
 
             navbar.classList.contains('fadeUp') &&
                 navbar.classList.remove('fadeUp')
+            toTop.style.display = 'none';
         }
     })
 });
+
+var toTop = document.getElementById('top-scroll');
+toTop.addEventListener('click', function () {
+    window.scrollTo(0, 0);
+})

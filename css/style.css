@@ -5,6 +5,10 @@
     /* color: #555; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none !important;
     color: white;
@@ -466,3 +470,28 @@ input[type="text"] {
     flex-direction: column;
     height: 200px;
 }
+
+
+/* top to bottom scroll btn  */
+
+.top-scroll-btn {
+    position: fixed;
+    right: 28px;
+    bottom: 21px;
+    padding: 4px 13px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: black;
+    color: #ffb600;
+
+}
+
+.top-scroll-btn .inner-btn {
+    font-size: 12px;
+}
+
+.top-scroll-btn:hover {
+    color: white;
+}
+
+/* top to bottom scroll btn  */
